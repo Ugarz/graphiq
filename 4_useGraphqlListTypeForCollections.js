@@ -1,4 +1,4 @@
-// https://egghead.io/lessons/javascript-use-graphql-primitive-types
+// https://egghead.io/lessons/javascript-use-graphql-s-list-type-for-collections
 'use strict'
 
 const { graphql, buildSchema } = require('graphql');

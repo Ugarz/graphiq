@@ -1,4 +1,4 @@
-// https://egghead.io/lessons/javascript-create-a-graphql-schema?play=yes
+// https://egghead.io/lessons/javascript-use-graphql-s-object-type-for-basic-types
 'use strict'
 
 const { graphql, buildSchema } = require('graphql');
