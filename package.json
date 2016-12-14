@@ -5,5 +5,10 @@
   "license": "MIT",
   "dependencies": {
     "graphql": "^0.8.2"
+  },
+  "scripts": {
+    "page1": "node 1_createGraphqlSchema.js",
+    "page2": "node 2_usePrimitivesTypes.js",
+    "page3": "node 3_useObjectTypeForBasicTypes.js"
   }
 }
