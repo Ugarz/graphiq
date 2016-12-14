@@ -15,13 +15,29 @@ const schema = buildSchema(`
     watched: Boolean
   }
   type Query {
-    video: Video
+    video: Video,
+    videos: [Video]
   }
 `);
 
+// Video types
+const videoA = {
+  id: 'a',
+  title: 'Morning is Dying',
+  duration: 120,
+  watched: true
+}
+const videoB = {
+  id: 'a',
+  title: 'MAIF is eating Morning',
+  duration: 280,
+  watched: true
+}
+const videos = [videoA, videoB]
+
 // Ma query
 const query = `query myFirstQuery{
-  video {
+  videos {
     id,
     title,
     duration,
@@ -36,7 +52,8 @@ const resolvers = {
     title: 'bar',
     duration: 180,
     watched: true
-  })
+  }),
+  videos: () => videos,
 }
 
 // Use graphql using schema, query and resolvers
