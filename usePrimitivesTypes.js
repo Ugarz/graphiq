@@ -9,16 +9,22 @@ const schema = buildSchema(`
     query: Query
   }
   type Query {
-    foo: String
+    id: ID,
+    title: String,
+    duration: Int,
+    watched: Boolean
   }
 `);
 
 // Ma query
-const query = `query myFirstQuery{ foo }`;
+const query = `query myFirstQuery{ id title duration watched }`;
 
 // a request
 const resolvers = {
-  foo: () => 'bar'
+  id: () => '1',
+  title: () => 'bar',
+  duration: () => 180,
+  watched: () => true
 }
 
 // Use graphql using schema, query and resolvers
